@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { checkboxClasses } from '@mui/material/Checkbox';
 
 import HeaderContainer from './components/HeaderContainer';
-import ListContainer from './components/ListContainer';
+import ListContainer from './components/ListContainer/ListContainer';
 import SearchContainer from './components/SearchContainer/SearchContainer';
 import StepsContainer from './components/StepsContainer';
 
@@ -31,13 +31,21 @@ const theme = createTheme({
         },
       },
     },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          border: 0,
+          boxShadow: 'none',
+        },
+      },
+    },
     MuiTab: {
       styleOverrides: {
         root: {
           backgroundColor: 'white',
           borderBottom: '2px solid hsl(215, 17%, 75%, 0.5)',
           "&:disabled": {
-            color: '#AFB8C5'
+            color: '#AFB8C5 '
           }
         },
       },

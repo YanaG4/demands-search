@@ -1,0 +1,16 @@
+.tag {
+    color: var(--dark-grey);   
+    font-weight: 500;
+    padding: 4px 10px; 
+    position: relative;
+}
+.tag-background {
+    background-color: var(--dark-grey);    
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    border-radius: 4px;
+}

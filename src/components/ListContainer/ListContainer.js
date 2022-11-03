@@ -1,7 +1,8 @@
 import React from 'react'
+import ProductContainer from './ProductContainer'
 
 export default function ListContainer() {
     return (
-        <div className='container-wrapper'>ListContainer</div>
+        <ProductContainer />
     )
 }

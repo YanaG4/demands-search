@@ -2,7 +2,7 @@ import React from 'react'
 import Checkbox from '@mui/material/Checkbox';
 import { FormControlLabel } from '@mui/material'
 
-import './TagsField.css'
+import './CategoryField.css'
 
 // const TAGS = [
 //     { SOFTWARE_DEVELOPMENT: 'Software Development' },
@@ -12,7 +12,7 @@ import './TagsField.css'
 //     { MANAGEMENT_TOOLS: 'Management Tools' },
 // ]
 
-export default function TagsField() {
+export default function CategoryField() {
     return (
         <div className='flex-container'>
             <FormControlLabel control={<Checkbox defaultChecked />} label='Software Development' />

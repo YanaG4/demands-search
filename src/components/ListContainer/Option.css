@@ -1,0 +1,7 @@
+.option-container {
+    display: flex;
+    align-items: center;
+}
+.option-text-thin {
+    color: var(--dark-grey)
+}

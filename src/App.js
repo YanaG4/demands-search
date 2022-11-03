@@ -27,7 +27,7 @@ const theme = createTheme({
         label: {
           color: '#8492A6',
           fontSize: 15,
-          fontWeight: 500
+          fontWeight: 500,
         },
       },
     },

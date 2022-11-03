@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 import Option from './Option';
 
 export default function ProductDetails() {
+    const [checked, setChecked] = useState('')
+
     return (
         <AccordionDetails>
             <h3>
@@ -15,7 +16,7 @@ export default function ProductDetails() {
             </h3>
             <Typography>Foxit Software PhantomPDF Business provides powerful PDF Editor capabilities to allow authors to update their documents themselves.</Typography>
             <RadioGroup
-                defaultValue="option1"
+                defaultValue="Option 1"
                 name="radio-buttons-group"
             >
                 <Option value={'Option 1'} />

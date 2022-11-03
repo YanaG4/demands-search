@@ -1,7 +1,20 @@
 import React from 'react'
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 export default function StepsContainer() {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     return (
-        <div>StepsContainer</div>
+        <div className='container-wrapper'>
+            <Tabs value={value} onChange={handleChange} aria-label="steps">
+                <Tab label="1. Product" />
+                <Tab label="2. Address" disabled />
+                <Tab label="3. Overview" disabled />
+            </Tabs>
+        </div>
     )
 }

@@ -1,8 +1,8 @@
 import './App.css';
-import HeaderContainer from './Components/HeaderContainer';
-import ListContainer from './Components/ListContainer';
-import SearchContainer from './Components/SearchContainer';
-import StepsContainer from './Components/StepsContainer';
+import HeaderContainer from './components/HeaderContainer';
+import ListContainer from './components/ListContainer';
+import SearchContainer from './components/SearchContainer';
+import StepsContainer from './components/StepsContainer';
 
 function App() {
   return (

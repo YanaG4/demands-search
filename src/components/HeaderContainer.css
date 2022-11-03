@@ -1,0 +1,19 @@
+.header-container {
+    margin-bottom: 38px;
+}
+.header-container h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--black);
+}
+.header-container p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-grey);
+}

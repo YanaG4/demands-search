@@ -22,10 +22,23 @@ const theme = createTheme({
         },
       },
     },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: {
+          color: '#8492A6',
+          fontSize: 15,
+          fontWeight: 500
+        },
+      },
+    },
     MuiTab: {
       styleOverrides: {
         root: {
           backgroundColor: 'white',
+          borderBottom: '2px solid hsl(215, 17%, 75%, 0.5)',
+          "&:disabled": {
+            color: '#AFB8C5'
+          }
         },
       },
     },

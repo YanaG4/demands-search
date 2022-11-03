@@ -22,7 +22,7 @@ export default function StepsContainer() {
                 }}
             >
                 <Tab label="1. Product" />
-                <Tab label="2. Address" disabled />
+                <Tab label="2. Addresses" disabled />
                 <Tab label="3. Overview" disabled />
             </Tabs>
         </>

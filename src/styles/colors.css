@@ -1,4 +1,7 @@
 :root {
     --black: #3C4858;
     --dark-grey: #8492A6;
+    --cold-grey: #AFB8C5;
+    --transparent-grey: hsl(215, 17%, 75%, 0.7);
+    --sky-blue: #12B8FF;
 }

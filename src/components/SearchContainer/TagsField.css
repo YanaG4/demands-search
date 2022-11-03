@@ -1,0 +1,12 @@
+.MuiCheckbox-root {
+    color: var(--transparent-grey) !important;
+}
+.MuiCheckbox-root.Mui-checked {
+    color: var(--sky-blue) !important; 
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}

@@ -10,7 +10,17 @@ export default function StepsContainer() {
     };
     return (
         <div className='container-wrapper'>
-            <Tabs value={value} onChange={handleChange} aria-label="steps">
+            <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="steps"
+                TabIndicatorProps={{
+                    style: {
+                        backgroundColor: 'var(--sky-blue)',
+                        color: 'var(--sky-blue)'
+                    }
+                }}
+            >
                 <Tab label="1. Product" />
                 <Tab label="2. Address" disabled />
                 <Tab label="3. Overview" disabled />

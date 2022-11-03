@@ -9,7 +9,7 @@ export default function StepsContainer() {
         setValue(newValue);
     };
     return (
-        <div className='container-wrapper'>
+        <>
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -25,6 +25,6 @@ export default function StepsContainer() {
                 <Tab label="2. Address" disabled />
                 <Tab label="3. Overview" disabled />
             </Tabs>
-        </div>
+        </>
     )
 }

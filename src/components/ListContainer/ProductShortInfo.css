@@ -1,0 +1,15 @@
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px; 
+    color: var(--black) 
+}
+.product-info-category {
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}

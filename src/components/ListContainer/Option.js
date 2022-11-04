@@ -47,7 +47,7 @@ export default function Option({ value }) {
                 }}
                 label={value}
             />
-            <p className={(useRadioGroup().value === value) ? 'option-text-bold' : 'option-text-thin'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+            <p className={(useRadioGroup().value === value) ? 'option-text option-text-bold' : 'option-text option-text-thin'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
         </div>
     )
 }

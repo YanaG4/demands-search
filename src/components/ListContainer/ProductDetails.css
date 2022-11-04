@@ -1,0 +1,17 @@
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+h3 {
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--black-grey);
+    margin: 26px 0 20px 0;
+}
+.product-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black-grey);
+    letter-spacing: 0.02em;
+}

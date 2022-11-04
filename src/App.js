@@ -22,6 +22,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          color: 'hsl(215, 17%, 75%, 0.7)',
+        },
+      },
+    },
     MuiFormControlLabel: {
       styleOverrides: {
         label: {

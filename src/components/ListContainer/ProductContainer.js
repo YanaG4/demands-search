@@ -6,7 +6,8 @@ import ProductDetails from './ProductDetails';
 
 import './ProductContainer.css'
 
-export default function ProductContainer() {
+export default function ProductContainer(props) {
+  const { data } = props
   const [expanded, setExpanded] = React.useState(false);
   const handleChange =
     (panel) => (event, isExpanded) => {
@@ -16,7 +17,7 @@ export default function ProductContainer() {
   return (
     <div className='container-wrapper product-container'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <ProductShortInfo />
+        <ProductShortInfo data={data} />
         <ProductDetails />
       </Accordion>
     </div>

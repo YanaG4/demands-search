@@ -2,7 +2,7 @@ import axios from 'axios'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 const initialState = {
-    products: ['blbla'],
+    products: [],
     status: 'idle',
     error: null,
 }
@@ -14,7 +14,7 @@ export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async
 
 const postsSlice = createSlice({
     name: 'products',
-    initialState: [],
+    initialState,
     reducers: {
     },
     extraReducers: {
@@ -28,3 +28,4 @@ const postsSlice = createSlice({
 export default postsSlice.reducer
 
 export const getAllProducts = (state) => state.products.products
+export const getProductsStatus = (state) => state.products.status

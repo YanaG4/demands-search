@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getAllProducts, fetchAllProducts, getProductsStatus } from '../../features/products/productsSlice'
 
 import ProductContainer from './ProductContainer'
+import LoadingCircle from '../Loading/LoadingCircle'
 
 export default function ListContainer() {
     const dispatch = useDispatch()
@@ -22,7 +23,7 @@ export default function ListContainer() {
         )
         :
         (
-            <div><h3>...Loading</h3></div>
+            <LoadingCircle />
         )
     return (
         <>

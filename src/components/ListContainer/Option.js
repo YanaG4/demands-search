@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Typography from '@mui/material/Typography';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { styled } from '@mui/material/styles';
@@ -27,27 +26,25 @@ export default function Option({ value }) {
 
     function MyFormControlLabel(props) {
         const radioGroup = useRadioGroup();
-        // MUI UseRadio Group
         let checked = false;
         if (radioGroup) {
             checked = radioGroup.value === props.value;
         }
-
         return <StyledFormControlLabel checked={checked} {...props} />;
     }
 
     return (
         <div className="option-container">
             <MyFormControlLabel
-                value={value}
+                value={value.name}
                 control={<Radio
                 />}
                 sx={{
                     whiteSpace: 'nowrap'
                 }}
-                label={value}
+                label={value.name}
             />
-            <p className={(useRadioGroup().value === value) ? 'option-text option-text-bold' : 'option-text option-text-thin'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+            <p className={(useRadioGroup().value === value.name) ? 'option-text option-text-bold' : 'option-text option-text-thin'}>{value.description?.length ? value.description : ""}</p>
         </div>
     )
 }

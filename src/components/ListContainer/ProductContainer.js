@@ -18,7 +18,7 @@ export default function ProductContainer(props) {
     <div className='container-wrapper product-container'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ProductShortInfo data={data} />
-        <ProductDetails />
+        <ProductDetails data={data} />
       </Accordion>
     </div>
   )

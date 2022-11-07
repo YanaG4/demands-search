@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 import RadioGroup from '@mui/material/RadioGroup';
 import Divider from '@mui/material/Divider';
 
@@ -9,8 +8,24 @@ import Option from './Option';
 
 import './ProductDetails.css'
 
-export default function ProductDetails() {
+export default function ProductDetails(props) {
     const [checked, setChecked] = useState('')
+    const { data } = props
+    let renderOptions = ''
+    renderOptions = !data.options?.length ?
+        (<></>)
+        :
+        (
+            <RadioGroup
+                defaultValue={data.options[0].name}
+                name="radio-buttons-group"
+                sx={{ mt: '16px' }}
+            >
+                {data.options.map((option) => (
+                    <Option key={option.name} value={option} />
+                ))}
+            </RadioGroup>
+        )
 
     return (
         <AccordionDetails>
@@ -18,18 +33,13 @@ export default function ProductDetails() {
             <h3>
                 Product Details
             </h3>
-            <p className='product-description'>Foxit Software PhantomPDF Business provides powerful PDF Editor capabilities to allow authors to update their documents themselves.</p>
-            <RadioGroup
-                defaultValue="Option 1"
-                name="radio-buttons-group"
-                sx={{ mt: '16px' }}
-            >
-                <Option value={'Option 1'} />
-                <Option value={'Option 2'} />
-            </RadioGroup>
+            <p className='product-description'>{data.description}</p>
+            <>
+                {renderOptions}
+            </>
             <div className='button-group'>
                 <ContainedButton text='Choose' />
-                <OutlinedButton text='Go to Manufacturer' />
+                <a href={data.manufacturerUrl} target="_blank"><OutlinedButton text='Go to Manufacturer' ></OutlinedButton></a>
             </div>
         </AccordionDetails>
     )

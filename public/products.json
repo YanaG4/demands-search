@@ -9,6 +9,15 @@
 			"PhantomPDF provides powerful PDF Editor capabilities to allow authors to update their documents themselves.",
 			"Standard - Simple interface and limited functionality."
 		],
+		"options": [
+			{
+				"name": "1 Year Maintenance",
+				"description": "Standard - Simple interface and limited functionality."},
+			{
+				"name": "Without Maintenance",
+				"description": "Not having a maintenance strategy is the simplest “strategy” to have for asset maintenance. The absence of a strategy eliminates the need to plan ahead for maintenance."
+			}
+		],
 		"option1": "1 Year Maintenance",
 		"option2": "Without Maintenance"
 	},
@@ -21,6 +30,14 @@
 		[
 			"PhantomPDF provides powerful PDF Editor capabilities to allow authors to update their documents themselves.",
 			"Business - Advances capabilities, complete lifecycle solution."
+		],
+		"options": [
+			{
+				"name": "1 Year Maintenance",
+				"description": "Standard - Simple interface and limited functionality."},
+			{
+				"name": "Without Maintenance"
+			}
 		],
 		"option1": "1 Year Maintenance",
 		"option2": "Without Maintenance"
@@ -37,6 +54,14 @@
 			"Automate tasks such as comparing drawings, adding blocks, creating schedules, and more.",
 			"Customize with add-on apps and APIs."
 		],
+		"options": [
+			{
+				"name": "1 Year Maintenance",
+				"description": "Standard - Simple interface and limited functionality."},
+			{
+				"name": "Without Maintenance"
+			}
+		],
 		"option1": "With Maintenance",
 		"option2": "Without Maintenance"
 	},
@@ -52,6 +77,13 @@
 			"- Mark up your screenshots, or talk through a process and answer questions with a quick video.",
 			"- Create custom how-to guides, tutorials, and quick videos right within Snagit"
 		],
+		"options": [
+			{
+				"name": "1 Year Maintenance"},
+			{
+				"name": "Without Maintenance"
+			}
+		],
 		"option1": "With Maintenance",
 		"option2": "Without Maintenance"
 	},
@@ -64,6 +96,7 @@
 		[
 			"Camtasia lets you record a video of what’s on your computer screen. Use it to make lessons, tutorials, or product demos. Turn your screen recordings into compelling videos with Camtasia’s video editing tools, animations, and effects."
 		],
+		"options": [],
 		"option1": null,
 		"option2": null
 	},
@@ -75,6 +108,15 @@
 		"description": 
 		[
 			"JRebel is a productivity tool that allows developers to reload code changes instantly. It skips the rebuild, restart and redeploy cycle common in Java development. JRebel enables developers to get more done in the same amount of time and to stay in the flow while coding."
+		],
+		"options": [
+			{
+				"name": "New user",
+				"description": "Standard - Simple interface and limited functionality."},
+			{
+				"name": "Renewal for existing user",
+				"description": "Standard - Simple interface and limited functionality."
+			}
 		],
 		"option1": "New user",
 		"option2": "Renewal for existing user"
@@ -88,6 +130,7 @@
 		[
 			"The editor actually 'gets' your code and deeply understands its structure, supporting all the PHP language features for modern and legacy projects. It provides the best code completion, refactoring, on-the-fly error prevention, and more."
 		],
+		"options": [],
 		"option1": null,
 		"option2": null
 	},
@@ -101,6 +144,7 @@
 			"The Visual Studio Extension for .NET Developers.",
 			"Not only does ReSharper warn you when there's a problem in your code but it provides hundreds of quick-fixes to solve problems automatically."
 		],
+		"options": [],
 		"option1": null,
 		"option2": null
 	},
@@ -113,6 +157,15 @@
 		[
 			"Tableau is a powerful and fastest growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data into the very easily understandable format. Data analysis is very fast with Tableau and the visualizations created are in the form of dashboards and worksheets."
 		],
+		"options": [
+			{
+				"name": "Perpetual",
+				"description": "Perpetual - Simple interface and limited functionality. Perpetual available"},
+			{
+				"name": "Subscription",
+				"description": "Subscription - Simple interface and limited functionality."
+			}
+		],
 		"option1": "Perpetual",
 		"option2": "Subscription"
 	},
@@ -124,6 +177,32 @@
 		"description": 
 		[
 			"Zoom Rooms tackles the three biggest pain points of the conference room: Starting a meeting, booking a meeting, and sharing content."
+		],
+		"options": [],
+		"option1": null,
+		"option2": null
+	},
+	{
+		"productName": "Test Product. 3 Options",
+		"tags": [ "Maintenance" ],
+		"category": "Daily Business",
+		"manufacturerUrl": "https://www.google.com/",
+		"description": 
+		[
+			"A product added for three options of maintenance available"
+		],
+		"options": [
+			{
+				"name": "Perpetual",
+				"description": "Perpetual - Simple interface and limited functionality. Perpetual available"},
+			{
+				"name": "1 Year Maintenance",
+				"description": "1 Year Maintenance - Simple interface and limited functionality."
+			},
+			{
+				"name": "Without Maintenance",
+				"description": "Without Maintenance"
+			}
 		],
 		"option1": null,
 		"option2": null

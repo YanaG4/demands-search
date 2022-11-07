@@ -7,11 +7,14 @@ import { ContainedButton, OutlinedButton } from '../Button/Button';
 import Option from './Option';
 
 import './ProductDetails.css'
+import ProductDescription from './ProductDescription';
 
 export default function ProductDetails(props) {
     const [checked, setChecked] = useState('')
     const { data } = props
     let renderOptions = ''
+    let renderDescription = ''
+
     renderOptions = !data.options?.length ?
         (<></>)
         :
@@ -26,14 +29,16 @@ export default function ProductDetails(props) {
                 ))}
             </RadioGroup>
         )
-
+    renderDescription = data.description.map(descriptionLine => (
+        <ProductDescription key={descriptionLine} description={descriptionLine} />
+    ))
     return (
         <AccordionDetails>
             <Divider />
             <h3>
                 Product Details
             </h3>
-            <p className='product-description'>{data.description}</p>
+            <div className='product-description'>{renderDescription}</div>
             <>
                 {renderOptions}
             </>

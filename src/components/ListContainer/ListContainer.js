@@ -17,8 +17,8 @@ export default function ListContainer() {
     let renderProducts = ""
     renderProducts = status === "success" ?
         (
-            products.map((product, index) =>
-                <ProductContainer key={index} data={product} />
+            products.map((product) =>
+                <ProductContainer key={product.id} data={product} />
             )
         )
         :

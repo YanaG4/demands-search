@@ -9,6 +9,7 @@
     border: 0;
     border-radius: 3px;
     letter-spacing: 0.02em;
+    text-decoration: none;
 }
 
 .contained-button {
@@ -21,14 +22,18 @@
     box-shadow:inset 0px 0px 0px 1px var(--sky-blue);
 }
 
-.button:hover, .button:focus {
+.button:hover, 
+.button:focus {
     background-color: var(--light-blue);
     color: white;
     box-shadow: none;
+    outline: none;
+    border: 0;
 }
 .button:active {
     background-color: var(--light-blue);
     color: white;
-    box-shadow: none;
+    outline: none;
+    border: 0;
     box-shadow: inset 0px 0px 1px 2px var(--sky-blue);
 }

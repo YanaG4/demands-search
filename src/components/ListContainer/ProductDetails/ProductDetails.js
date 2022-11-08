@@ -3,11 +3,12 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import RadioGroup from '@mui/material/RadioGroup';
 import Divider from '@mui/material/Divider';
 
-import { ContainedButton, OutlinedButton } from '../../Button/Button';
 import Option from '../Option/Option';
 import ProductDescription from '../ProductDescription/ProductDescription';
 
 import './ProductDetails.css'
+import '../../../styles/Button/Button.css'
+import { containedButtonStyle, outlinedButtonStyle } from '../../../styles/Button/Button';
 
 export default function ProductDetails(props) {
     const [checked, setChecked] = useState('')
@@ -43,8 +44,8 @@ export default function ProductDetails(props) {
                 {renderOptions}
             </>
             <div className='button-group'>
-                <ContainedButton text='Choose' />
-                <a href={data.manufacturerUrl} target="_blank"><OutlinedButton text='Go to Manufacturer' ></OutlinedButton></a>
+                <button className={containedButtonStyle}>Choose</button>
+                <a className={outlinedButtonStyle} href={data.manufacturerUrl} target="_blank" rel="noopener noreferrer">Go to Manufacturer</a>
             </div>
         </AccordionDetails>
     )

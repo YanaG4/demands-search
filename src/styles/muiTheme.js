@@ -48,5 +48,20 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiInputBase: {
+            styleOverrides: {
+                root: {
+                    color: '#3C4858',
+                    fontSize: "17px",
+                    input: {
+                        '&::placeholder': {
+                            color: '#8492A6',
+                            opacity: "100%",
+                            paddingLeft: "3px"
+                        },
+                    },
+                },
+            },
+        },
     },
 })

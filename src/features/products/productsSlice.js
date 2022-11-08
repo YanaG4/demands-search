@@ -35,7 +35,7 @@ const postsSlice = createSlice({
         setKeyWords: (state, { payload }) => {
             if (!payload)
                 state.keyWords = ""
-            state.keyWords = payload
+            state.keyWords = payload.toLowerCase()
         },
         searchProducts: (state) => {
             function searchByFilters(product) {

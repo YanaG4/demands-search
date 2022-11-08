@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getAllProducts, fetchAllProducts, getProductsStatus } from '../../features/products/productsSlice'
+import { getAllProducts, fetchAllProducts, getProductsStatus } from '../../../features/products/productsSlice'
 
-import ProductContainer from './ProductContainer'
-import LoadingCircle from '../Loading/LoadingCircle'
+import ProductContainer from '../ProductContainer/ProductContainer'
+import LoadingCircle from '../../Loading/LoadingCircle'
 
 import './ListContainer.css'
 
@@ -29,16 +29,6 @@ export default function ListContainer() {
         )
     }
     renderProducts = renderSettings()
-    // = status === "success" ?
-    //     (
-    //         products.map((product) =>
-    //             <ProductContainer key={product.id} data={product} />
-    //         )
-    //     )
-    //     :
-    //     (
-    //         <LoadingCircle />
-    //     )
     return (
         <>
             {renderProducts}

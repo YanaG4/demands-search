@@ -1,6 +1,6 @@
 import React from 'react'
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Tag from './Tag';
+import Tag from '../Tag/Tag';
 
 import './ProductShortInfo.css'
 

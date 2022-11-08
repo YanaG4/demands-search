@@ -3,11 +3,11 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import RadioGroup from '@mui/material/RadioGroup';
 import Divider from '@mui/material/Divider';
 
-import { ContainedButton, OutlinedButton } from '../Button/Button';
-import Option from './Option';
+import { ContainedButton, OutlinedButton } from '../../Button/Button';
+import Option from '../Option/Option';
+import ProductDescription from '../ProductDescription/ProductDescription';
 
 import './ProductDetails.css'
-import ProductDescription from './ProductDescription';
 
 export default function ProductDetails(props) {
     const [checked, setChecked] = useState('')

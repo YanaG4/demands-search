@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 
-import { setKeyWords, getProductsStatus, searchProducts } from '../../features/products/productsSlice';
+import { setKeyWords, getProductsStatus, searchProducts } from '../../../features/products/productsSlice';
 
 export default function SearchField() {
     const dispatch = useDispatch()

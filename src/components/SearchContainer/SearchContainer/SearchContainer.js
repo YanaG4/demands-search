@@ -1,6 +1,7 @@
 import React from 'react'
-import SearchField from './SearchField';
-import CategoryField from './CategoryField';
+import SearchField from '../SearchField/SearchField';
+import CategoryField from '../CategoryField/CategoryField';
+
 import './SearchContainer.css'
 
 export default function SearchContainer() {

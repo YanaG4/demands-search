@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { styled } from '@mui/material/styles';
@@ -7,13 +7,6 @@ import { useRadioGroup } from '@mui/material/RadioGroup';
 import './Option.css'
 
 export default function Option({ value }) {
-    const [checked, setChecked] = useState(false);
-    // useEffect({
-    //     if(radioGroup) {
-    //         setChecked(radioGroup.value === props.value)
-    //     }
-    // }, [radioGroup])
-
     const StyledFormControlLabel = styled((props) => (
         <FormControlLabel {...props} />
     ))(({ theme, checked }) => ({
@@ -21,9 +14,6 @@ export default function Option({ value }) {
             color: theme.palette.primary.main
         }
     }));
-
-
-
     function MyFormControlLabel(props) {
         const radioGroup = useRadioGroup();
         let checked = false;
@@ -32,7 +22,6 @@ export default function Option({ value }) {
         }
         return <StyledFormControlLabel checked={checked} {...props} />;
     }
-
     return (
         <div className="option-container">
             <MyFormControlLabel

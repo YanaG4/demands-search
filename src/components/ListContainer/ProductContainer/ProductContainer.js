@@ -1,8 +1,8 @@
 import React from 'react'
 import Accordion from '@mui/material/Accordion';
 
-import ProductShortInfo from './ProductShortInfo';
-import ProductDetails from './ProductDetails';
+import ProductShortInfo from '../ProductShortInfo/ProductShortInfo';
+import ProductDetails from '../ProductDetails/ProductDetails';
 
 import './ProductContainer.css'
 

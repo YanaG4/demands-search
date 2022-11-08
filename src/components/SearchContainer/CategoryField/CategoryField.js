@@ -2,8 +2,8 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Checkbox from '@mui/material/Checkbox';
 import { FormControlLabel } from '@mui/material'
-import { setCategories, getProductsStatus, searchProducts } from '../../features/products/productsSlice';
-import { categories } from '../../constants/categories'
+import { setCategories, getProductsStatus, searchProducts } from '../../../features/products/productsSlice';
+import { categories } from '../../../constants/categories'
 
 import './CategoryField.css'
 
@@ -28,7 +28,6 @@ export default function CategoryField() {
                 key={category} />
         ))
     )
-
     return (
         <div className='flex-container'>
             {renderCategories}

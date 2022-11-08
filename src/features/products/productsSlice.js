@@ -45,9 +45,10 @@ const postsSlice = createSlice({
                     console.log(product.category);
                     return state.categories.includes(product.category)
                 }
+                const tags = product.tags.join(' ').toLowerCase()
                 if (!state.categories.length)
-                    return (product.productName.toLowerCase().includes(state.keyWords) || product.tags.includes(state.keyWords))
-                return state.categories.includes(product.category) && (product.productName.toLowerCase().includes(state.keyWords) || product.tags.includes(state.keyWords))
+                    return (product.productName.toLowerCase().includes(state.keyWords) || tags.includes(state.keyWords))
+                return state.categories.includes(product.category) && (product.productName.toLowerCase().includes(state.keyWords) || tags.includes(state.keyWords))
             }
             state.searchedProducts = state.products.filter(searchByFilters)
         }

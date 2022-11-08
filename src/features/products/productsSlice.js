@@ -4,8 +4,10 @@ import { nanoid } from 'nanoid'
 
 const initialState = {
     products: [],
-    status: 'idle',
-    error: null,
+    searchedProducts: [],
+    categories: [],
+    keyWords: '',
+    status: 'idle'
 }
 
 export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async () => {
@@ -15,7 +17,6 @@ export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async
             return { ...product, id: nanoid() }
         })
     )
-
     return products
 })
 
@@ -23,16 +24,45 @@ const postsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
+        setCategories: (state, { payload }) => {
+            const { name, checked } = payload
+            if (checked)
+                state.categories = [...state.categories, name]
+            else
+                state.categories = state.categories.filter(category => category !== name)
+            console.log(state.categories);
+        },
+        setKeyWords: (state, { payload }) => {
+            if (!payload)
+                state.keyWords = ""
+            state.keyWords = payload
+        },
+        searchProducts: (state) => {
+            function searchByFilters(product) {
+                if (!state.keyWords && !state.categories.length)
+                    return true
+                if (!state.keyWords) {
+                    console.log(product.category);
+                    return state.categories.includes(product.category)
+                }
+                if (!state.categories.length)
+                    return (product.productName.toLowerCase().includes(state.keyWords) || product.tags.includes(state.keyWords))
+                return state.categories.includes(product.category) && (product.productName.toLowerCase().includes(state.keyWords) || product.tags.includes(state.keyWords))
+            }
+            state.searchedProducts = state.products.filter(searchByFilters)
+        }
     },
     extraReducers: {
         [fetchAllProducts.fulfilled]: (state, { payload }) => {
             console.log("Fetched successfully");
-            return { ...state, products: payload, status: 'success' }
+            return { ...state, products: payload, searchedProducts: payload, status: 'success' }
         },
     }
 })
 
-export default postsSlice.reducer
+export const { searchProducts, setCategories, setKeyWords } = postsSlice.actions
 
-export const getAllProducts = (state) => state.products.products
+export const getAllProducts = (state) => state.products.searchedProducts
 export const getProductsStatus = (state) => state.products.status
+
+export default postsSlice.reducer

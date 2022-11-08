@@ -1,0 +1,5 @@
+.warning-message {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--dark-grey)
+}

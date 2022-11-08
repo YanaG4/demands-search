@@ -5,6 +5,8 @@ import { getAllProducts, fetchAllProducts, getProductsStatus } from '../../featu
 import ProductContainer from './ProductContainer'
 import LoadingCircle from '../Loading/LoadingCircle'
 
+import './ListContainer.css'
+
 export default function ListContainer() {
     const dispatch = useDispatch()
     const products = useSelector(getAllProducts)
@@ -15,16 +17,28 @@ export default function ListContainer() {
     }, [dispatch])
 
     let renderProducts = ""
-    renderProducts = status === "success" ?
-        (
+    function renderSettings() {
+        if (status !== "success")
+            return (<LoadingCircle />)
+        if (!products.length)
+            return (<h3 className='warning-message'>No Products found...</h3>)
+        return (
             products.map((product) =>
                 <ProductContainer key={product.id} data={product} />
             )
         )
-        :
-        (
-            <LoadingCircle />
-        )
+    }
+    renderProducts = renderSettings()
+    // = status === "success" ?
+    //     (
+    //         products.map((product) =>
+    //             <ProductContainer key={product.id} data={product} />
+    //         )
+    //     )
+    //     :
+    //     (
+    //         <LoadingCircle />
+    //     )
     return (
         <>
             {renderProducts}

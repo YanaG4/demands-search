@@ -5,6 +5,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import ListContainer from './components/ListContainer/ListContainer/ListContainer';
 import SearchContainer from './components/SearchContainer/SearchContainer/SearchContainer';
 import StepsContainer from './components/StepsContainer/StepsContainer';
+import AlertWrapper from './components/Alerts/AlertWrapper/AlertWrapper';
 
 import { theme } from './styles/muiTheme'
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
         <SearchContainer />
         <ListContainer />
       </div>
+      <AlertWrapper />
     </ThemeProvider>
   );
 }

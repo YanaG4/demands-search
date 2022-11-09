@@ -48,6 +48,20 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiAlert: {
+            styleOverrides: {
+                standardSuccess: {
+                    backgroundColor: '#12B8FF',
+                    opacity: "85%",
+                    color: 'white',
+                    fontSize: "15px",
+                    paddingRight: "40px",
+                    "& .MuiAlert-icon": {
+                        color: "white",
+                    }
+                },
+            },
+        },
         MuiInputBase: {
             styleOverrides: {
                 root: {

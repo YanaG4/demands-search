@@ -45,7 +45,7 @@
 	{
 		"productName": "Autodesk AutoCAD 2020.x",
 		"tags": [ "Autodesk", "3D Modeling", "Visualization", "Solid", "Surface", "Mesh Modeling", "Photorealistic Rendering", "Section Planes", "Visual Styles", "3D Navigation", "3D Scanning", "Base, Projected, and Section Views" ],
-		"category": "Daily Business",
+		"category": "Graphic Editors",
 		"manufacturerUrl": "https://www.autodesk.com",
 		"description": 
 		[
@@ -68,7 +68,7 @@
 	{
 		"productName": "TechSmith Snagit",
 		"tags": [ "Screen capture", "Snipping tool", "Snagit", "TechSmith" ],
-		"category": "Daily Business",
+		"category": "Graphic Editors",
 		"manufacturerUrl": "https://www.techsmith.com/screen-capture.html",
 		"description": 
 		[
@@ -90,7 +90,7 @@
 	{
 		"productName": "TechSmith Camtasia",
 		"tags": [ "TechSmith", "Camtasia", "Video Editor", "Screen recorder" ],
-		"category": "Daily Business",
+		"category": "Graphic Editors",
 		"manufacturerUrl": "https://www.techsmith.com/video-editor.html",
 		"description": 
 		[
@@ -198,6 +198,31 @@
 			{
 				"name": "1 Year Maintenance",
 				"description": "1 Year Maintenance - Simple interface and limited functionality."
+			},
+			{
+				"name": "Without Maintenance",
+				"description": "Without Maintenance"
+			}
+		],
+		"option1": null,
+		"option2": null
+	},
+	{
+		"productName": "Test Product. Software Development",
+		"tags": [ "Maintenance" ],
+		"category": "Software Development",
+		"manufacturerUrl": "https://www.google.com/",
+		"description": 
+		[
+			"Software Development"
+		],
+		"options": [
+			{
+				"name": "Perpetual",
+				"description": "Perpetual - Simple interface and limited functionality. Perpetual available"},
+			{
+				"name": "1 Year Maintenance"
+
 			},
 			{
 				"name": "Without Maintenance",

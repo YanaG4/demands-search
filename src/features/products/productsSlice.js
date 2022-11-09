@@ -7,6 +7,7 @@ const initialState = {
     searchedProducts: [],
     categories: [],
     keyWords: '',
+    chosenProduct: {},
     status: 'idle'
 }
 
@@ -51,7 +52,10 @@ const postsSlice = createSlice({
                 return state.categories.includes(product.category) && (product.productName.toLowerCase().includes(state.keyWords) || tags.includes(state.keyWords))
             }
             state.searchedProducts = state.products.filter(searchByFilters)
-        }
+        },
+        choseProduct: (state, { payload }) => {
+            state.chosenProduct = payload
+        },
     },
     extraReducers: {
         [fetchAllProducts.fulfilled]: (state, { payload }) => {
@@ -61,9 +65,10 @@ const postsSlice = createSlice({
     }
 })
 
-export const { searchProducts, setCategories, setKeyWords } = postsSlice.actions
+export const { searchProducts, setCategories, setKeyWords, choseProduct } = postsSlice.actions
 
 export const getAllProducts = (state) => state.products.searchedProducts
 export const getProductsStatus = (state) => state.products.status
+export const getChosenProduct = (state) => state.products.choseProduct
 
 export default postsSlice.reducer

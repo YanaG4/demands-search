@@ -9,6 +9,7 @@
 body {
   background-color: #F3F3F3;
   font-family: 'Roboto';
+  position: relative;
 }
 .main-container {
   max-width: 1152px;

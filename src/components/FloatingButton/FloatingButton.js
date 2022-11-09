@@ -11,7 +11,7 @@ export default function FloatingButton() {
         bottom: 32,
         right: '5vw',
         height: '70px',
-        width: '70px'
+        width: '70px',
     };
 
     const colorStyle = {

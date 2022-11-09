@@ -12,7 +12,7 @@ const initialState = {
 }
 
 export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await axios.get('products.json')
+    const response = await axios.get('products6.json')
     const products = await Promise.all(
         response.data.map(async (product) => {
             return { ...product, id: nanoid() }

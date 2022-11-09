@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/demands-search/static/css/main.9c37c691.css",
+    "main.js": "/demands-search/static/js/main.33c12e88.js",
+    "index.html": "/demands-search/index.html",
+    "main.9c37c691.css.map": "/demands-search/static/css/main.9c37c691.css.map",
+    "main.33c12e88.js.map": "/demands-search/static/js/main.33c12e88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c37c691.css",
+    "static/js/main.33c12e88.js"
+  ]
+}

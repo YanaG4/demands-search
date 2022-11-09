@@ -9,6 +9,7 @@ import AlertWrapper from './components/Alerts/AlertWrapper/AlertWrapper';
 
 import { theme } from './styles/muiTheme'
 import './App.css';
+import FloatingButton from './components/FloatingButton/FloatingButton';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <SearchContainer />
         <ListContainer />
       </div>
+      <FloatingButton />
       <AlertWrapper />
     </ThemeProvider>
   );

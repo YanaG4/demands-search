@@ -19,3 +19,5 @@
 - JSON
 
 - Figma
+
+- redux-watch

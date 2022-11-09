@@ -36,6 +36,7 @@ export default function SearchField() {
                 autoFocus
                 onBlur={() => setSearchColor(darkGrey)}
                 onFocus={() => setSearchColor(skyBlue)}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
         </Paper>
     )

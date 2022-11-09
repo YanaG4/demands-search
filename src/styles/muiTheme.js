@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { skyBlue, transparentGrey, darkGrey, coldGrey, black } from './colors';
+import { skyBlue, transparentGrey, darkGrey, coldGrey, black, lightBlue } from './colors';
 export const theme = createTheme({
     palette: {
         primary: {
@@ -51,12 +51,14 @@ export const theme = createTheme({
         },
         MuiAlert: {
             styleOverrides: {
-                standardSuccess: {
-                    backgroundColor: skyBlue,
-                    opacity: "85%",
-                    color: 'white',
+                root: {
                     fontSize: "15px",
                     paddingRight: "40px",
+                    opacity: "100%",
+                },
+                standardSuccess: {
+                    backgroundColor: skyBlue,
+                    color: 'white',
                     "& .MuiAlert-icon": {
                         color: "white",
                     }

@@ -11,7 +11,6 @@ export default function CategoryField() {
     const dispatch = useDispatch()
     const status = useSelector(getProductsStatus)
     const categoryCheckedHandling = (name, checked) => {
-        console.log(checked);
         if (status === "success")
             dispatch(setCategories({ name, checked }))
         dispatch(searchProducts())

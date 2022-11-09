@@ -12,7 +12,7 @@ const initialState = {
 }
 
 export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await axios.get('products6.json')
+    const response = await axios.get('products.json')
     const products = await Promise.all(
         response.data.map(async (product) => {
             return { ...product, id: nanoid() }
@@ -31,7 +31,6 @@ const postsSlice = createSlice({
                 state.categories = [...state.categories, name]
             else
                 state.categories = state.categories.filter(category => category !== name)
-            console.log(state.categories);
         },
         setKeyWords: (state, { payload }) => {
             if (!payload)
@@ -40,15 +39,16 @@ const postsSlice = createSlice({
         },
         searchProducts: (state) => {
             function searchByFilters(product) {
-                if (!state.keyWords && !state.categories.length)
+                if (!state.keyWords && !state.categories.length) {
                     return true
+                }
                 if (!state.keyWords) {
-                    console.log(product.category);
                     return state.categories.includes(product.category)
                 }
                 const tags = product.tags.join(' ').toLowerCase()
-                if (!state.categories.length)
+                if (!state.categories.length) {
                     return (product.productName.toLowerCase().includes(state.keyWords) || tags.includes(state.keyWords))
+                }
                 return state.categories.includes(product.category) && (product.productName.toLowerCase().includes(state.keyWords) || tags.includes(state.keyWords))
             }
             state.searchedProducts = state.products.filter(searchByFilters)
@@ -61,6 +61,10 @@ const postsSlice = createSlice({
         [fetchAllProducts.fulfilled]: (state, { payload }) => {
             console.log("Fetched successfully");
             return { ...state, products: payload, searchedProducts: payload, status: 'success' }
+        },
+        [fetchAllProducts.rejected]: (state) => {
+            console.log("Fetch failed");
+            return { ...state, status: 'error' }
         },
     }
 })

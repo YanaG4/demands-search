@@ -21,7 +21,7 @@ export const fetchAllProducts = createAsyncThunk('products/fetchProducts', async
     return products
 })
 
-const postsSlice = createSlice({
+const productsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
@@ -80,10 +80,10 @@ const postsSlice = createSlice({
     }
 })
 
-export const { searchProducts, setCategories, setKeyWords, choseProduct } = postsSlice.actions
+export const { searchProducts, setCategories, setKeyWords, choseProduct } = productsSlice.actions
 
 export const getAllProducts = (state) => state.products.searchedProducts
 export const getProductsStatus = (state) => state.products.status
 export const getChosenProduct = (state) => state.products.choseProduct
 
-export default postsSlice.reducer
+export default productsSlice.reducer

@@ -17,7 +17,7 @@ export default function ListContainer() {
     }, [dispatch])
 
     let renderProducts = ""
-    function renderSettings() {
+    function getRenderComponent() {
         if (status !== "success")
             return (<LoadingCircle />)
         if (!products.length)
@@ -28,7 +28,7 @@ export default function ListContainer() {
             )
         )
     }
-    renderProducts = renderSettings()
+    renderProducts = getRenderComponent()
     return (
         <>
             {renderProducts}

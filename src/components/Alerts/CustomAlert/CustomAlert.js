@@ -4,7 +4,7 @@ import Alert from '@mui/material/Alert';
 export const ProductSuccessfullyChosenAlert = (props) => {
     const { chosenProduct } = props
     return (
-        <Alert severity="success">You successfully chose {chosenProduct?.productName}
+        <Alert severity="success">You have successfully chosen {chosenProduct?.productName}
             {chosenProduct?.option ? ` with option: ${chosenProduct?.option}` : ''}</Alert>
     )
 }

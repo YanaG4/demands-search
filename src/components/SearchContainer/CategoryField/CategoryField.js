@@ -10,7 +10,7 @@ import './CategoryField.css'
 export default function CategoryField() {
     const dispatch = useDispatch()
     const status = useSelector(getProductsStatus)
-    const categoryCheckedHandling = (name, checked) => {
+    const handleCategoryChecked = (name, checked) => {
         if (status === "success")
             dispatch(setCategories({ name, checked }))
         dispatch(searchProducts())
@@ -21,7 +21,7 @@ export default function CategoryField() {
                 <Checkbox
                     defaultChecked={false}
                     name={category}
-                    onChange={(e) => categoryCheckedHandling(e.target.name, e.target.checked)}
+                    onChange={(e) => handleCategoryChecked(e.target.name, e.target.checked)}
                 />}
                 label={category}
                 key={category} />

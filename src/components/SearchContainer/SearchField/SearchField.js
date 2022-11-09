@@ -13,7 +13,7 @@ export default function SearchField() {
     const [searchColor, setSearchColor] = useState(skyBlue)
     const dispatch = useDispatch()
     const status = useSelector(getProductsStatus)
-    const searchBarHandling = (text) => {
+    const handleSearchBar = (text) => {
         if (status === "success")
             dispatch(setKeyWords(text))
         dispatch(searchProducts())
@@ -32,11 +32,11 @@ export default function SearchField() {
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="I’m looking for..."
                 inputProps={{ 'aria-label': 'search demand' }}
-                onChange={(e) => searchBarHandling(e.target.value)}
+                onChange={(e) => handleSearchBar(e.target.value)}
                 autoFocus
                 onBlur={() => setSearchColor(darkGrey)}
                 onFocus={() => setSearchColor(skyBlue)}
-                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
             />
         </Paper>
     )

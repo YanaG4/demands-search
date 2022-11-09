@@ -14,7 +14,7 @@ export default function Option({ value }) {
             color: theme.palette.primary.main
         }
     }));
-    function MyFormControlLabel(props) {
+    function OptionFormControlLabel(props) {
         const radioGroup = useRadioGroup();
         let checked = false;
         if (radioGroup) {
@@ -24,7 +24,7 @@ export default function Option({ value }) {
     }
     return (
         <div className="option-container">
-            <MyFormControlLabel
+            <OptionFormControlLabel
                 value={value.name}
                 control={<Radio
                 />}

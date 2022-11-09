@@ -7,14 +7,14 @@ import './ProductShortInfo.css'
 export default function ProductShortInfo(props) {
     const { data } = props
     let renderTags = ''
-    function tagsProcessing() {
+    function getCleanTags() {
         if (!data.tags?.length)
             return []
         if (data.tags.length === 1)
             return data.tags[0].split(',')
         return data.tags
     }
-    const tags = tagsProcessing()
+    const tags = getCleanTags()
     renderTags = tags.length > 0 ?
         (
             <div className='tags-container'>

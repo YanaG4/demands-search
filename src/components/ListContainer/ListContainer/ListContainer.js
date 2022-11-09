@@ -18,7 +18,7 @@ export default function ListContainer() {
 
     let renderProducts = ""
     function getRenderComponent() {
-        if (status !== "success")
+        if (status !== "success") //There would be different statuses, but we don't have backend in this demo. So I used this opportunity to show the prorgess indicator in any cases axcept success
             return (<LoadingCircle />)
         if (!products.length)
             return (<h3 className='warning-message'>No Products found...</h3>)

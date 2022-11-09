@@ -3,11 +3,14 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 export default function StepsContainer() {
+    //this part isn't currently used, because we have only one step of the workflow. 
+    //so it's here for the future use
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    //end of the unused part
     return (
         <>
             <Tabs

@@ -59,8 +59,19 @@ const postsSlice = createSlice({
     },
     extraReducers: {
         [fetchAllProducts.fulfilled]: (state, { payload }) => {
+            const products = payload.sort((a, b) => {
+                let aProductName = a.productName.toLowerCase(),
+                    bProductName = b.productName.toLowerCase();
+                if (aProductName < bProductName) {
+                    return -1;
+                }
+                if (aProductName > bProductName) {
+                    return 1;
+                }
+                return 0;
+            });
             console.log("Fetched successfully");
-            return { ...state, products: payload, searchedProducts: payload, status: 'success' }
+            return { ...state, products: products, searchedProducts: products, status: 'success' }
         },
         [fetchAllProducts.rejected]: (state) => {
             console.log("Fetch failed");

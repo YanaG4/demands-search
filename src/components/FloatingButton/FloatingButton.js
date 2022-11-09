@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Fab from '@mui/material/Fab';
 import UpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { skyBlue, blackGrey } from '../../styles/colors';
 
 export default function FloatingButton() {
     const [isButtonVisible, setIsButtonVisible] = useState(false);
@@ -16,10 +17,10 @@ export default function FloatingButton() {
 
     const colorStyle = {
         color: 'common.white',
-        bgcolor: '#545e6b',
+        bgcolor: blackGrey,
         opacity: '50%',
         '&:hover': {
-            bgcolor: '#12B8FF',
+            bgcolor: skyBlue,
             opacity: '80%',
         },
     };

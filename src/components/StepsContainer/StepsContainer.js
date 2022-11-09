@@ -12,7 +12,6 @@ export default function StepsContainer() {
         <>
             <Tabs
                 value={value}
-                onChange={handleChange}
                 aria-label="steps"
                 TabIndicatorProps={{
                     style: {

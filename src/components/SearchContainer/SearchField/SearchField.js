@@ -7,8 +7,10 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import { setKeyWords, getProductsStatus, searchProducts } from '../../../features/products/productsSlice';
 
+import { darkGrey, skyBlue } from '../../../styles/colors';
+
 export default function SearchField() {
-    const [searchColor, setSearchColor] = useState("#12B8FF")
+    const [searchColor, setSearchColor] = useState(skyBlue)
     const dispatch = useDispatch()
     const status = useSelector(getProductsStatus)
     const searchBarHandling = (text) => {
@@ -32,8 +34,8 @@ export default function SearchField() {
                 inputProps={{ 'aria-label': 'search demand' }}
                 onChange={(e) => searchBarHandling(e.target.value)}
                 autoFocus
-                onBlur={() => setSearchColor("#8492A6")}
-                onFocus={() => setSearchColor("#12B8FF")}
+                onBlur={() => setSearchColor(darkGrey)}
+                onFocus={() => setSearchColor(skyBlue)}
             />
         </Paper>
     )

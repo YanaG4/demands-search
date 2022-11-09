@@ -30,6 +30,7 @@
     outline: none;
     border: 0;
 }
+
 .button:active {
     background-color: var(--light-blue);
     color: white;

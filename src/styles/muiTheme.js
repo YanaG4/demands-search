@@ -1,29 +1,30 @@
 import { createTheme } from '@mui/material/styles';
+import { skyBlue, transparentGrey, darkGrey, coldGrey, black } from './colors';
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#12B8FF'
+            main: skyBlue
         }
     },
     components: {
         MuiCheckbox: {
             styleOverrides: {
                 root: {
-                    color: 'hsl(215, 17%, 75%, 0.7)',
+                    color: transparentGrey,
                 },
             },
         },
         MuiRadio: {
             styleOverrides: {
                 root: {
-                    color: 'hsl(215, 17%, 75%, 0.7)',
+                    color: transparentGrey,
                 },
             },
         },
         MuiFormControlLabel: {
             styleOverrides: {
                 label: {
-                    color: '#8492A6',
+                    color: darkGrey,
                     fontSize: 15,
                     fontWeight: 500,
                 },
@@ -43,7 +44,7 @@ export const theme = createTheme({
                     backgroundColor: 'white',
                     borderBottom: '2px solid hsl(215, 17%, 75%, 0.5)',
                     "&:disabled": {
-                        color: '#AFB8C5 '
+                        color: coldGrey
                     }
                 },
             },
@@ -51,7 +52,7 @@ export const theme = createTheme({
         MuiAlert: {
             styleOverrides: {
                 standardSuccess: {
-                    backgroundColor: '#12B8FF',
+                    backgroundColor: skyBlue,
                     opacity: "85%",
                     color: 'white',
                     fontSize: "15px",
@@ -65,11 +66,11 @@ export const theme = createTheme({
         MuiInputBase: {
             styleOverrides: {
                 root: {
-                    color: '#3C4858',
+                    color: black,
                     fontSize: "17px",
                     input: {
                         '&::placeholder': {
-                            color: '#8492A6',
+                            color: darkGrey,
                             opacity: "100%",
                             paddingLeft: "3px"
                         },

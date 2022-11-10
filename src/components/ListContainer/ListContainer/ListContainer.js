@@ -31,7 +31,9 @@ export default function ListContainer() {
             return (<h3 className='warning-message'>No Products found...</h3>)
         return (
             products.map((product) =>
-                <div className='container-wrapper product-container' key={product.id}>
+                <div
+                    className={expanded === product.id ? 'container-wrapper product-container product-container-border' : 'container-wrapper product-container'}
+                    key={product.id}>
                     <Accordion expanded={expanded === product.id} onChange={handleChange(product.id)} >
                         <ProductShortInfo data={product} />
                         <ProductDetails data={product} />

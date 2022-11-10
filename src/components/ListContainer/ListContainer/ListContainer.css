@@ -3,6 +3,7 @@
     margin-top: 40px;
     color: var(--dark-grey)
 }
-.product-container {
+.product-container-border {
     padding: 12px 10px;
+    border: 1px solid var(--sky-blue)
 }

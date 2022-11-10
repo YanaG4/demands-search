@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllProducts, fetchAllProducts, getProductsStatus } from '../../../features/products/productsSlice'
+import Accordion from '@mui/material/Accordion';
 
-import ProductContainer from '../ProductContainer/ProductContainer'
-import LoadingCircle from '../../Loading/LoadingCircle'
+import ProductShortInfo from '../ProductShortInfo/ProductShortInfo';
+import ProductDetails from '../ProductDetails/ProductDetails';
+import LoadingCircle from '../../Loading/LoadingCircle';
 
 import './ListContainer.css'
 
@@ -11,6 +13,11 @@ export default function ListContainer() {
     const dispatch = useDispatch()
     const products = useSelector(getAllProducts)
     const status = useSelector(getProductsStatus)
+    const [expanded, setExpanded] = useState(false);
+
+    const handleChange = (productContainer) => (event, isExpanded) => {
+        setExpanded(isExpanded ? productContainer : false);
+    };
 
     useEffect(() => {
         dispatch(fetchAllProducts())
@@ -24,7 +31,12 @@ export default function ListContainer() {
             return (<h3 className='warning-message'>No Products found...</h3>)
         return (
             products.map((product) =>
-                <ProductContainer key={product.id} data={product} />
+                <div className='container-wrapper product-container' key={product.id}>
+                    <Accordion expanded={expanded === product.id} onChange={handleChange(product.id)} >
+                        <ProductShortInfo data={product} />
+                        <ProductDetails data={product} />
+                    </Accordion>
+                </div>
             )
         )
     }

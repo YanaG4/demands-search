@@ -3,3 +3,6 @@
     margin-top: 40px;
     color: var(--dark-grey)
 }
+.product-container {
+    padding: 12px 10px;
+}

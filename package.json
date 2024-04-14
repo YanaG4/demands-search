@@ -1,7 +1,7 @@
 {
   "name": "demands-search",
   "version": "0.1.0",
-  "homepage": "http://sinxenon.github.io/demands-search",
+  "homepage": "https://yanag4.github.io/demands-search",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

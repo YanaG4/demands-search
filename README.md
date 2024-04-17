@@ -2,7 +2,7 @@
 
 ## DEMO
 
-https://sinxenon.github.io/demands-search/
+https://yanag4.github.io/demands-search/
 
 ## Tech stack
 
@@ -54,6 +54,6 @@ https://sinxenon.github.io/demands-search/
 
 ## Author
 
-Yana (SinXenon) — frontend developer
+Yana — frontend developer
 
-sinxenon4@gmail.com
+sinxenon.biz@gmail.com
